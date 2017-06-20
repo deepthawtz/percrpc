@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package percentage;
+
+service Percentage {
+  rpc Calculate(Request) returns (Response) {}
+}
+
+message Request {
+  int64 dividend = 1;
+  int64 divisor = 2;
+}
+
+message Response {
+  float percentage = 1;
+}
